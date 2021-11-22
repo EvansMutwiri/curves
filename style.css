@@ -1,9 +1,30 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0%;
     font-family: 'Jost', sans-serif;
     color: white;
-    background: #202731;
+    background: #140021;
     overflow-x: hidden;
+}
+.container-fluid {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    scroll-padding: 100px;
+}
+
+.navbar.has-centered-menu .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
 }
 
 section {
@@ -13,14 +34,12 @@ section {
     align-items: center;
     min-height: 400px;
     padding: 100px 20vw;
-}
-
-.blue {
-    background: #3c31dd;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .red {
-    background: #dd3f31;
+    background: #002233;
 }
 
 .pink {
@@ -59,48 +78,6 @@ section {
     background-color: #3c31dd;
     transform: translate(-4%, 40%);
     z-index: -1;
-}
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(135% + 1.3px);
-    height: 150px;
-}
-
-.wave .shape-fill {
-    fill: #ff0066;
-}
-
-.opacity-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.opacity-wave svg {
-    position: relative;
-    display: block;
-    width: calc(281% + 1.3px);
-    height: 150px;
-    transform: rotateY(180deg);
-}
-
-.opacity-wave .shape-fill {
-    fill: #ff0066;
 }
 
 .blue-pink {
@@ -189,4 +166,37 @@ section {
 .blob-motion {
     position: absolute;
     transform: translate(-20%);
+}
+.custom-shape-divider-bottom-1637573107 {
+    /* position: absolute; */
+    /* bottom: 0;
+    left: 0; */
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* transform: rotate(180deg); */
+}
+
+.custom-shape-divider-bottom-1637573107 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1637573107 .shape-fill {
+    fill: #0f0f10;
+}
+#contact {
+    height: 50vh;
+}
+
+#projects {
+    background-image: url(./circle-bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#home {
+    background: #020024;
 }
